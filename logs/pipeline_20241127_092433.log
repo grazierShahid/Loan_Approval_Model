@@ -1,0 +1,15 @@
+2024-11-27 09:24:33,145 - __main__ - INFO - Starting ML pipeline...
+2024-11-27 09:24:33,145 - root - INFO - Created directory: artifacts
+2024-11-27 09:24:33,145 - root - INFO - Created directory: artifacts/ingested_data
+2024-11-27 09:24:33,145 - root - INFO - Created directory: artifacts/transformed_data
+2024-11-27 09:24:33,146 - root - INFO - Created directory: artifacts/models
+2024-11-27 09:24:33,146 - root - INFO - Created directory: logs
+2024-11-27 09:24:33,261 - __main__ - INFO - Step 1: Data Ingestion
+2024-11-27 09:24:33,310 - __main__ - INFO - Data ingestion completed. Data saved to artifacts/ingested_data
+2024-11-27 09:24:33,311 - __main__ - INFO - Step 2: Data Transformation
+2024-11-27 09:24:33,367 - __main__ - INFO - Data transformation completed. Data saved to artifacts/transformed_data
+2024-11-27 09:24:33,367 - __main__ - INFO - Step 3: Model Training and Evaluation
+2024-11-27 09:24:41,380 - __main__ - INFO - Model evaluation results saved to artifacts/models/model_evaluation_results.csv
+2024-11-27 09:24:41,384 - __main__ - INFO - Best performing model: Random Forest (F1 Score: 0.9991)
+2024-11-27 09:24:41,391 - root - INFO - Pipeline summary saved to artifacts/pipeline_summary_20241127_092441.csv
+2024-11-27 09:24:41,391 - __main__ - INFO - ML pipeline completed successfully!

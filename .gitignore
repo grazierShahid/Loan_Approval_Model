@@ -1,0 +1,9 @@
+mlruns/
+venv/
+__pycache__/
+catboost_info/
+*.pyc
+.env
+dataset/
+mlflow.db./venv/lib/python3.8/site-packages/catboost/_catboost.so
+./venv/lib/python3.8/site-packages/xgboost/lib/libxgboost.so

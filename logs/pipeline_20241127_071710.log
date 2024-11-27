@@ -1,0 +1,11 @@
+2024-11-27 07:17:10,421 - __main__ - INFO - Starting ML pipeline...
+2024-11-27 07:17:10,421 - root - INFO - Created directory: artifacts
+2024-11-27 07:17:10,421 - root - INFO - Created directory: artifacts/ingested_data
+2024-11-27 07:17:10,422 - root - INFO - Created directory: artifacts/transformed_data
+2024-11-27 07:17:10,422 - root - INFO - Created directory: artifacts/models
+2024-11-27 07:17:10,422 - root - INFO - Created directory: logs
+2024-11-27 07:17:10,422 - __main__ - ERROR - Error in ML pipeline: __init__() missing 1 required positional argument: 'data_path'
+Traceback (most recent call last):
+  File "src/main.py", line 67, in main
+    model_trainer = ModelTrainer()
+TypeError: __init__() missing 1 required positional argument: 'data_path'

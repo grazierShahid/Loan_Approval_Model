@@ -1,0 +1,40 @@
+2024-11-27 10:34:01,226 - __main__ - INFO - Starting ML pipeline...
+2024-11-27 10:34:01,226 - root - INFO - Created directory: artifacts
+2024-11-27 10:34:01,226 - root - INFO - Created directory: artifacts/ingested_data
+2024-11-27 10:34:01,226 - root - INFO - Created directory: artifacts/transformed_data
+2024-11-27 10:34:01,226 - root - INFO - Created directory: artifacts/models
+2024-11-27 10:34:01,226 - root - INFO - Created directory: logs
+2024-11-27 10:34:01,351 - __main__ - INFO - Step 1: Data Ingestion
+2024-11-27 10:34:01,402 - __main__ - INFO - Data ingestion completed. Data saved to artifacts/ingested_data
+2024-11-27 10:34:01,402 - __main__ - INFO - Step 2: Data Transformation
+2024-11-27 10:34:01,459 - __main__ - INFO - Data transformation completed. Data saved to artifacts/transformed_data
+2024-11-27 10:34:01,460 - __main__ - INFO - Step 3: Model Training and Evaluation
+2024-11-27 10:34:02,291 - __main__ - ERROR - Error in ML pipeline: 'DataFrame' object has no attribute 'iteritems'
+Traceback (most recent call last):
+  File "src/main.py", line 96, in main
+    results = model_trainer.initiate_model_training()
+  File "/root/code/relaxy-ai-engineer-exam-question/src/model_trainer.py", line 124, in initiate_model_training
+    raise e
+  File "/root/code/relaxy-ai-engineer-exam-question/src/model_trainer.py", line 113, in initiate_model_training
+    metrics = self.evaluate_model(model, X_train, y_train, X_test, y_test)
+  File "/root/code/relaxy-ai-engineer-exam-question/src/model_trainer.py", line 65, in evaluate_model
+    model.fit(X_train, y_train)
+  File "/usr/local/lib/python3.8/dist-packages/catboost/core.py", line 5007, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/usr/local/lib/python3.8/dist-packages/catboost/core.py", line 2262, in _fit
+    train_params = self._prepare_train_params(
+  File "/usr/local/lib/python3.8/dist-packages/catboost/core.py", line 2148, in _prepare_train_params
+    train_pool = _build_train_pool(X, y, cat_features, text_features, embedding_features, pairs,
+  File "/usr/local/lib/python3.8/dist-packages/catboost/core.py", line 1430, in _build_train_pool
+    train_pool = Pool(X, y, cat_features=cat_features, text_features=text_features, embedding_features=embedding_features, pairs=pairs, weight=sample_weight, group_id=group_id,
+  File "/usr/local/lib/python3.8/dist-packages/catboost/core.py", line 790, in __init__
+    self._init(data, label, cat_features, text_features, embedding_features, embedding_features_data, pairs, weight,
+  File "/usr/local/lib/python3.8/dist-packages/catboost/core.py", line 1411, in _init
+    self._init_pool(data, label, cat_features, text_features, embedding_features, embedding_features_data, pairs, weight,
+  File "_catboost.pyx", line 3941, in _catboost._PoolBase._init_pool
+  File "_catboost.pyx", line 3991, in _catboost._PoolBase._init_pool
+  File "_catboost.pyx", line 3807, in _catboost._PoolBase._init_features_order_layout_pool
+  File "_catboost.pyx", line 2717, in _catboost._set_features_order_data_pd_data_frame
+  File "/usr/local/lib/python3.8/dist-packages/pandas/core/generic.py", line 5989, in __getattr__
+    return object.__getattribute__(self, name)
+AttributeError: 'DataFrame' object has no attribute 'iteritems'
